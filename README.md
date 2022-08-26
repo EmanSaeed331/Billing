@@ -1,6 +1,6 @@
 # billing
 
-> Billing is a simple online  invoicing system
+### Billing is a simple online  invoicing system
 
 ## About
 
