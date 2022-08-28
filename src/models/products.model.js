@@ -1,13 +1,18 @@
 // products-model.js - A mongoose model
 // 
 // See http://mongoosejs.com/docs/models.html
+
+const { default: mongoose } = require('mongoose');
+
 // for more of what you can do here.
 module.exports = function (app) {
   const modelName = 'products';
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
   const schema = new Schema({
-    text: { type: String, required: true }
+    productName: { type: String},
+    productDescription: { type: String  },
+    userId:{type:mongoose.Schema.Types.ObjectId , required:true , ref:'users'}
   }, {
     timestamps: true
   });

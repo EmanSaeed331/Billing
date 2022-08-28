@@ -23,10 +23,11 @@
       "algorithm": "HS256",
       "expiresIn": "1d"
     },
-    "local": {
-      "usernameField": "email",
-      "passwordField": "password"
-    }
+      "local": {
+        "usernameField": "email",
+        "passwordField": "password"
+      }
+    
   },
   "mongodb": "mongodb://localhost:27017/billing"
 }
