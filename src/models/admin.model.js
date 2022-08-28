@@ -1,21 +1,14 @@
-// billings-model.js - A mongoose model
+// admin-model.js - A mongoose model
 // 
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
-const { default: mongoose } = require('mongoose');
-
 module.exports = function (app) {
-  const modelName = 'billings';
+  const modelName = 'admin';
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
   const schema = new Schema({
-    invoiceNumber: { type: Number, required: true },
-    userId:{type:mongoose.Schema.Types.ObjectId},
-    bill_amount:{type:Number, required: true},
-    stats:{type:String , required:true},
-    reviewed_by:{type:String },
-    adminId:{type:mongoose.Schema.Types.ObjectId},
-     
+    text: { type: String, required: true }
+  }, {
     timestamps: true
   });
 
